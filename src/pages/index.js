@@ -4,7 +4,9 @@ import * as React from "react"
 const IndexPage = () => {
   return (
     <main>
-      Danielle and Julian
+      <h1 className="text-3xl font-bold underline">
+        Danielle and Julian
+      </h1>
     </main>
   )
 }
