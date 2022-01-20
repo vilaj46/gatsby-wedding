@@ -9,6 +9,7 @@ import NewHeader from "../components/shared/NewHeader";
 import Information from "../components/infoPage/Information";
 import InformationGallery from "../components/infoPage/InformationGallery";
 import PageSection from "../components/shared/PageSection";
+import Footer from "../components/shared/Footer"
 
 const InfoPage = (props) => {
   const { path } = props;
@@ -23,6 +24,7 @@ const InfoPage = (props) => {
         </div>
       </PageSection>
       <InformationGallery images={edges} specialImage={specialImage} />
+      <Footer /> 
     </section>
   );
 };
