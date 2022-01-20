@@ -1,5 +1,6 @@
 import React from "react";
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image";
 
 import data from "../../data"
 
@@ -14,7 +15,7 @@ export default function MainImage({ image }) {
                 </p>
             </div>
             <div className="z-0">
-                <Img fluid={image.childImageSharp.fluid} />
+                <StaticImage src="../../images/main.jpg" alt="Danielle and Julian are in LOVE!" />
             </div>
         </div>
     )

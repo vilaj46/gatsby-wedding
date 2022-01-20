@@ -41,13 +41,6 @@ export const query = graphql`
         }
       }
     }
-    ourStoryImage: file(relativePath: { regex: "/ourStory.jpg/" }) {
-      childImageSharp {
-        fluid(maxWidth: 250, maxHeight: 400, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
   }
 `;
 
