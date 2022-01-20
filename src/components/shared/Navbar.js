@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Hamburger from "hamburger-react";
 
@@ -15,7 +15,7 @@ export default function NavBar({ path, isOpen, setOpen }) {
         <Hamburger toggled={isOpen} toggle={setOpen} />
       </div>
 
-      <ul className="hidden md:flex mt-3" style={{ fontFamily: "Cinzel" }}>
+      <ul className="hidden md:flex mt-3 cinzel">
         {nav.map((page) => {
           return (
             <Item

@@ -15,14 +15,14 @@ const InfoPage = (props) => {
   const { images, specialImage } = props.data;
   const { edges } = images;
   return (
-    <section>
+    <section className="ivory">
       <NewHeader path={path} />
       <PageSection>
-        <div className="pt-28">
+        <div className="pt-28 ivory">
           <Information />
-          <InformationGallery images={edges} specialImage={specialImage} />
         </div>
       </PageSection>
+      <InformationGallery images={edges} specialImage={specialImage} />
     </section>
   );
 };

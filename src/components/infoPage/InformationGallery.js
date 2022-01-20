@@ -3,13 +3,15 @@ import { StaticImage } from "gatsby-plugin-image";
 
 export default function InformationGallery() {
   return (
-    <section className="flex">
-      <Four />
-      <div style={{ border: "2px solid black" }}>
-        <StaticImage
-          src="../../images/informationGallery/special.jpg"
-          alt="Information Main Photo"
-        />
+    <section className="bg-white">
+      <div className="flex w-9/12 mx-auto">
+        <Four />
+        <div>
+          <StaticImage
+            src="../../images/informationGallery/special.jpg"
+            alt="Information Main Photo"
+          />
+        </div>
       </div>
     </section>
   );

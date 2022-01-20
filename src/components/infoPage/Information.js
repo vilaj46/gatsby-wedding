@@ -5,7 +5,7 @@ import data from "../../data";
 export default function Information() {
   const { infos } = data;
   return (
-    <section className="ivory pb-24">
+    <section className="pb-24">
       <div className="container mx-auto" style={{ fontFamily: "Cinzel" }}>
         <h2 className="text-center text-3xl pt-24 pb-24">
           Ceremony & {<br />} Celebration

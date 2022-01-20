@@ -30,11 +30,7 @@ function Item({ href, label, hover, hamburger = false }) {
   const align = hamburger ? "text-right" : "text-left";
 
   return (
-    <li
-      className={`${margin} mx-3 pb-1 ${underline} ${align}`}
-      onMouseEnter={enter}
-      onMouseLeave={leave}
-    >
+    <li className={`${margin} mx-3 pb-2 ${underline} ${align}`}>
       <Link
         to={href}
         onMouseEnter={() => enter(href)}
@@ -49,7 +45,7 @@ function Item({ href, label, hover, hamburger = false }) {
 }
 
 function Underline({ under, underline }) {
-  const decoration = (underline || under) ? "block" : "hidden";
+  const decoration = underline || under ? "opacity-100" : "opacity-0";
   return <div className={`w-full h-0.5 bg-black ${decoration}`}></div>;
 }
 
