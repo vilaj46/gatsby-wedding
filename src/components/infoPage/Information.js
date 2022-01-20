@@ -6,7 +6,7 @@ export default function Information() {
   const { infos } = data;
   return (
     <section className="pb-24">
-      <div className="container mx-auto" style={{ fontFamily: "Cinzel" }}>
+      <div className="container mx-auto cinzel">
         <h2 className="text-center text-3xl pt-24 pb-24">
           Ceremony & {<br />} Celebration
         </h2>

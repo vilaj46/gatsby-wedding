@@ -9,22 +9,24 @@ import NewHeader from "../components/shared/NewHeader";
 import Information from "../components/infoPage/Information";
 import InformationGallery from "../components/infoPage/InformationGallery";
 import PageSection from "../components/shared/PageSection";
-import Footer from "../components/shared/Footer"
+import Footer from "../components/shared/Footer";
 
 const InfoPage = (props) => {
   const { path } = props;
   const { images, specialImage } = props.data;
   const { edges } = images;
   return (
-    <section className="ivory">
-      <NewHeader path={path} />
-      <PageSection>
-        <div className="pt-28 ivory">
-          <Information />
-        </div>
-      </PageSection>
+    <section>
+      <div className="ivory">
+        <NewHeader path={path} />
+        <PageSection>
+          <div className="pt-28 ivory">
+            <Information />
+          </div>
+        </PageSection>
+      </div>
       <InformationGallery images={edges} specialImage={specialImage} />
-      <Footer /> 
+      <Footer />
     </section>
   );
 };
