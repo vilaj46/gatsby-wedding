@@ -4,3 +4,11 @@
 
 @import url("../fonts/amberLight/stylesheet.css");
 @import url("../fonts/cinzel/stylesheet.css");
+
+.ivory {
+    background-color: rgb(229 229 229);
+}
+
+.offBlack {
+    color: rgb(46, 46, 46);
+}
