@@ -2,10 +2,7 @@ import church from "../images/icons/church.svg";
 import cracker from "../images/icons/cracker.svg";
 import heart from "../images/icons/heart.svg";
 
-import main from "../images/main.jpg";
-import ourStoryImage from "../images/ourStoryImage.jpg";
-
-export default {
+const data = {
   bride: {
     first: "Danielle",
     last: "Smith",
@@ -44,7 +41,7 @@ export default {
       icon: heart,
     },
     {
-      label: "reception",
+      label: "Reception",
       time: "5:00 PM",
       desc: `The Vineyards at Aquebogue 
              978 Main Rd, Riverhead,
@@ -59,3 +56,5 @@ export default {
     },
   ],
 };
+
+export default data;

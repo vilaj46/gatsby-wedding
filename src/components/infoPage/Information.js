@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 
 import data from "../../data";
 
@@ -25,6 +24,7 @@ export default function Information() {
 
 function Block({ info }) {
   const { label, time, desc, icon } = info;
+
   return (
     <div className="w-1/3">
       <img src={icon} alt={label} className="block mx-auto" />

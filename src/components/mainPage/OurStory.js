@@ -6,20 +6,26 @@ import data from "../../data";
 export default function OurStory({ image }) {
   const { ourStory } = data;
   return (
-    <section className="mt-24 flex justify-between max-h-96 overflow-hidden">
-      <SideImage />
-      <div className="w-2/4">
-        <p className="italic">For those who didn't know</p>
-        <br />
-        <p className="text-xl font-bold offBlack">Our Story</p>
-        <br />
-        <br />
-        <p>{ourStory}</p>
+    <section
+      className="container w-11/12 mx-auto mt-12"
+    >
+      <div>
+        <em className="italic mb-3 block">For those who didn't know</em>
+        <p className="mb-3 text-xl font-bold offBlack">Our Story</p>
+        <p className="mb-3">{ourStory}</p>
       </div>
+      <SideImage />
     </section>
   );
 }
 
 function SideImage() {
-  return <StaticImage src="../../images/ourStoryImage.jpg" alt="Our Story <<Insert Cute Image Here>>"/>
+  return (
+    <div className="w-full">
+      <StaticImage
+        src="../../images/ourStoryMainImage.jpg"
+        alt="Our Story <<Insert Cute Image Here>>"
+      />
+    </div>
+  );
 }

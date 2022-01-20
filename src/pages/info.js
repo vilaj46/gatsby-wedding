@@ -8,20 +8,21 @@ import { graphql } from "gatsby";
 import NewHeader from "../components/shared/NewHeader";
 import Information from "../components/infoPage/Information";
 import InformationGallery from "../components/infoPage/InformationGallery";
+import PageSection from "../components/shared/PageSection";
 
 const InfoPage = (props) => {
   const { path } = props;
   const { images, specialImage } = props.data;
   const { edges } = images;
   return (
-    <section className="pt-10">
-      <div className="container mx-auto">
-        <NewHeader path={path} />
-      </div>
-      <Information />
-      <div className="container mx-auto">
-        <InformationGallery images={edges} specialImage={specialImage}  />
-      </div>
+    <section>
+      <NewHeader path={path} />
+      <PageSection>
+        <div className="pt-28">
+          <Information />
+          <InformationGallery images={edges} specialImage={specialImage} />
+        </div>
+      </PageSection>
     </section>
   );
 };

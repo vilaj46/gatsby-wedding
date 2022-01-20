@@ -9,18 +9,21 @@ import NewHeader from "../components/shared/NewHeader";
 import Footer from "../components/shared/Footer";
 import MainImage from "../components/mainPage/MainImage";
 import OurStory from "../components/mainPage/OurStory";
+import PageSection from "../components/shared/PageSection";
 
 const IndexPage = (props) => {
   const { path } = props;
   const { mainImage, ourStoryImage } = props.data;
 
   return (
-    <main className="pt-10">
-      <section className="container mx-auto">
-        <NewHeader path={path} />
-        <MainImage image={mainImage} />
-        <OurStory image={ourStoryImage} />
-      </section>
+    <main>
+      <NewHeader path={path} />
+      <PageSection>
+        <div className="pt-28">
+          <MainImage image={mainImage} />
+          <OurStory image={ourStoryImage} />
+        </div>
+      </PageSection>
       <Footer />
     </main>
   );
@@ -32,13 +35,6 @@ export const query = graphql`
       id
       siteMetadata {
         siteUrl
-      }
-    }
-    mainImage: file(relativePath: { regex: "/main.jpg/" }) {
-      childImageSharp {
-        fluid(maxWidth: 1280, maxHeight: 500, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
       }
     }
   }

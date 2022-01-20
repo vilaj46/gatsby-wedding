@@ -4,8 +4,14 @@ import { Link } from "gatsby";
 import data from "../../data";
 
 export default function Heroes() {
-    const { bride, groom } = data;
-    return (
-        <h1 className="text-xl" style={{fontFamily: "Amber Light Font"}}><Link to="/">{bride.first} & {groom.first}</Link></h1>
-    )
+  const { bride, groom } = data;
+  return (
+    <div>
+      <h1 className="text-xl amberLight align-middle">
+        <Link to="/" className="block mt-3">
+          {bride.first} & {groom.first}
+        </Link>
+      </h1>
+    </div>
+  );
 }

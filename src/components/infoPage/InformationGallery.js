@@ -1,75 +1,45 @@
 import React from "react";
-import Img from "gatsby-image";
+import { StaticImage } from "gatsby-plugin-image";
 
-import data from "../../data";
-
-export default function InformationGallery({ images, specialImage }) {
-  const four = getFourImages(images);
-  const { fluid } = specialImage.childImageSharp;
+export default function InformationGallery() {
   return (
     <section className="flex">
-      <Four images={four} />
-      <div style={{height: "500px", width: "410px"}}>
-      <Img fluid={fluid} />
+      <Four />
+      <div style={{ border: "2px solid black" }}>
+        <StaticImage
+          src="../../images/informationGallery/special.jpg"
+          alt="Information Main Photo"
+        />
       </div>
     </section>
   );
 }
 
-function Four({ images }) {
-  const split1 = images.slice(0, images.length / 2);
-  const split2 = images.slice(images.length / 2, images.length);
+function Four() {
   return (
     <div className="flex">
-      <div>
-        {split1.map((img) => {
-          const { fluid } = img.node.childImageSharp;
-          return (
-            <div
-              style={{
-                maxHeight: "240px",
-                maxWidth: "200px",
-                height: "240px",
-                width: "200px",
-              }}
-              className="overflow-hidden"
-            >
-              <Img fluid={fluid} />
-            </div>
-          );
-        })}
+      <div className="mb-3">
+        <StaticImage
+          src="../../images/informationGallery/ig1.jpg"
+          alt="Information Main Photo"
+          className="mb-3"
+        />
+        <StaticImage
+          src="../../images/informationGallery/ig2.jpg"
+          alt="Information Main Photo"
+        />
       </div>
       <div>
-        {split2.map((img) => {
-          const { fluid } = img.node.childImageSharp;
-          return (
-            <div
-              style={{
-                maxHeight: "240px",
-                maxWidth: "200px",
-                height: "240px",
-                width: "200px",
-              }}
-              className="overflow-hidden"
-            >
-              <Img fluid={fluid} />
-            </div>
-          );
-        })}
+        <StaticImage
+          src="../../images/informationGallery/ig3.jpg"
+          alt="Information Main Photo"
+          className="mb-3"
+        />
+        <StaticImage
+          src="../../images/informationGallery/ig4.jpg"
+          alt="Information Main Photo"
+        />
       </div>
     </div>
   );
-}
-
-function getFourImages(images) {
-  return images.filter((img) => {
-    try {
-      const { originalName } = img.node.childImageSharp.fluid;
-      if (originalName.includes("ig")) {
-        return img;
-      }
-    } catch {
-      // do nothing
-    }
-  });
 }
