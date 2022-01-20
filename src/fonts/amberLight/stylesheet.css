@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Amber Light Font';
+    src: url('AmberLightFont-Regular.woff2') format('woff2'),
+        url('AmberLightFont-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Amber Light Font swirls Uppercase';
+    src: url('AmberLightFontswirlsUppercase-Regular.woff2') format('woff2'),
+        url('AmberLightFontswirlsUppercase-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Amber Light Font swirls lowercase';
+    src: url('AmberLightFontswirlslowercase-Regular.woff2') format('woff2'),
+        url('AmberLightFontswirlslowercase-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
