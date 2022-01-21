@@ -28,9 +28,12 @@ export default function Nav({ pathname }) {
   const position = isOpen ? "absolute" : "static";
   const scroll = scrolling ? "fixed" : "static";
 
-  window.addEventListener("scroll", () =>
-    listenToScroll(scrolling, setScrolling)
-  );
+  const isBrowser = typeof window !== "undefined";
+  if (isBrowser) {
+    window.addEventListener("scroll", () =>
+      listenToScroll(scrolling, setScrolling)
+    );
+  }
 
   return (
     <nav className={`${scroll} top-0 w-full z-50 bg-white eaves text-xl`}>
@@ -50,7 +53,7 @@ export default function Nav({ pathname }) {
         </Container>
       </div>
       {isOpen && <LinksForHamburger nav={nav} pathname={pathname} />}
-      <RegularLinks nav={nav} pathname={pathname} pathname={pathname}/>
+      <RegularLinks nav={nav} pathname={pathname} pathname={pathname} />
     </nav>
   );
 }
@@ -67,14 +70,16 @@ function listenToScroll(scrolling, setScrolling) {
 }
 
 function LinksForHamburger({ nav, pathname }) {
-  const isHome = pathname === "/" ? "text-green-900" : "text-black"
+  const isHome = pathname === "/" ? "text-green-900" : "text-black";
   return (
     <ul>
-      <li className={`${isHome} text-center border border-gray p-3 hover:text-green-900`}>
+      <li
+        className={`${isHome} text-center border border-gray p-3 hover:text-green-900`}
+      >
         <Link to="/">Home</Link>
       </li>
       {nav.map((n) => {
-        const color = pathname === n.href ? "text-green-900" : "text-black"
+        const color = pathname === n.href ? "text-green-900" : "text-black";
         return (
           <li
             key={n.label}
@@ -93,9 +98,12 @@ function RegularLinks({ nav, pathname }) {
     <SubContainer>
       <ul className="hidden md:flex justify-evenly">
         {nav.map((n) => {
-          const color = pathname === n.href ? "text-green-900" : "text-black"
+          const color = pathname === n.href ? "text-green-900" : "text-black";
           return (
-            <li key={n.label} className={`text-center hover:text-green-900 ${color}`}>
+            <li
+              key={n.label}
+              className={`text-center hover:text-green-900 ${color}`}
+            >
               <Link to={n.href}>{n.label}</Link>
             </li>
           );
