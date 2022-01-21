@@ -79,7 +79,8 @@ function LinksForHamburger({ nav, pathname }) {
         <Link to="/">Home</Link>
       </li>
       {nav.map((n) => {
-        const color = pathname === n.href ? "text-green-900" : "text-black";
+        const browserHref = n.href + "/";
+        const color = (pathname === n.href || pathname === browserHref) ? "text-green-900" : "text-black";
         return (
           <li
             key={n.label}
@@ -98,7 +99,8 @@ function RegularLinks({ nav, pathname }) {
     <SubContainer>
       <ul className="hidden md:flex justify-evenly">
         {nav.map((n) => {
-          const color = pathname === n.href ? "text-green-900" : "text-black";
+          const browserHref = n.href + "/";
+          const color = (pathname === n.href || pathname === browserHref) ? "text-green-900" : "text-black";
           return (
             <li
               key={n.label}
