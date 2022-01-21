@@ -1,5 +1,5 @@
 import * as React from "react"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
 // https://picsum.photos/

@@ -4,6 +4,8 @@
 
 @import url("../fonts/amberLight/stylesheet.css");
 @import url("../fonts/cinzel/stylesheet.css");
+@import url("../fonts/quickPen/stylesheet.css");
+@import url("../fonts/mrsEaves/stylesheet.css");
 
 .ivory {
     background-color: rgb(229 229 229);
@@ -21,6 +23,30 @@
     font-family: "Cinzel";
 }
 
+.quickPen {
+    font-family: "Quickpen";
+}
+
+.eaves {
+    font-family: "MrsEavesPetiteCaps";
+}
+
 .amberLight {
     font-family: "Amber Light Font";
+}
+
+.green {
+    color: rgb(76, 106, 64)
+}
+
+.shadow {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.shadow2 {
+    border-top: 2px solid rgba(0, 0, 0, 0.6);
+}
+
+.shadow3 {
+    border: 1px solid rgba(0, 0, 0, 0.6);
 }

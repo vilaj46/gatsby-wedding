@@ -18,7 +18,7 @@ export default function NewHeader({ path }) {
         <Heroes />
         <NavBar path={path} isOpen={isOpen} setOpen={setOpen} />
       </div>
-      <ul className={`w-9/12 mx-auto ${isOpen ? "block" : "hidden"}`}>
+      <ul className={`w-9/12 mx-auto ${isOpen ? "block" : "hidden"} cinzel`}>
         {nav.map((page) => {
           return (
             <Item
